@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CroissanceLabs">
+  <defs>
+    <linearGradient id="verre" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E73FF"/>
+      <stop offset="1" stop-color="#00C2F7"/>
+    </linearGradient>
+    <linearGradient id="liquide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00C2F7"/>
+      <stop offset="1" stop-color="#1E73FF"/>
+    </linearGradient>
+    <linearGradient id="fleche" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#00D1B2"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+  </defs>
+  <path d="M15.5 41 Q23.5 36 32 41 T48.5 41 L52 47 a7.5 7.5 0 0 1 -6.5 11 H18.5 a7.5 7.5 0 0 1 -6.5 -11 Z" fill="url(#liquide)"/>
+  <circle cx="24" cy="50" r="2.4" fill="#fff" opacity=".85"/>
+  <circle cx="30" cy="45.5" r="1.4" fill="#fff" opacity=".7"/>
+  <path d="M26 10 V24 L12 47 a7.5 7.5 0 0 0 6.5 11 H45.5 a7.5 7.5 0 0 0 6.5 -11 L38 24 V10 M22 10 H42" fill="none" stroke="url(#verre)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="19,36 29,27 35,31 52,13" fill="none" stroke="url(#fleche)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="60,5 45,8 57,20" fill="#22C55E"/>
+</svg>

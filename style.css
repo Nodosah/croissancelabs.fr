@@ -1,0 +1,131 @@
+/* Site CroissanceLabs — charte graphique CroissanceLabs (palette, Montserrat + Inter). */
+:root {
+  --marine: #0B2D5B;
+  --nuit: #061631;
+  --bleu: #1E73FF;
+  --bleu-clair: #00C2F7;
+  --turquoise: #00D1B2;
+  --vert: #22C55E;
+  --violet: #6366F1;
+  --orange: #F59E0B;
+  --gris-fonce: #1F2937;
+  --gris-clair: #E5E7EB;
+  --fond-clair: #F5F8FC;
+  --texte-doux: #5B6474;
+  --degrade: linear-gradient(135deg, var(--bleu), var(--bleu-clair) 45%, var(--turquoise) 70%, var(--vert));
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fond-clair);
+  color: var(--gris-fonce);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .marque { font-family: "Montserrat", "Inter", system-ui, sans-serif; }
+
+a { color: var(--bleu); }
+
+.page { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+/* ---------- En-tête ---------- */
+.bandeau { background: radial-gradient(ellipse at 80% 0%, #0f4c9c 0%, var(--nuit) 60%); color: #fff; }
+
+header.site {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 0;
+}
+.marque { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 800; font-size: 1.2rem; }
+.marque img { width: 36px; height: 36px; }
+.marque span { color: var(--vert); }
+header.site nav a { color: #c9d6ea; text-decoration: none; margin-left: 18px; font-size: .95rem; }
+header.site nav a:hover { color: #fff; }
+
+/* ---------- Héros ---------- */
+.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 56px 0 72px; }
+.hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); line-height: 1.1; margin: 0 0 18px; font-weight: 800; }
+.hero h1 em { font-style: normal; color: var(--vert); }
+.hero p { color: #c9d6ea; font-size: 1.1rem; margin: 0 0 28px; max-width: 520px; }
+.devise { letter-spacing: .3em; font-size: .78rem; color: #9fb3d1; text-transform: uppercase; }
+.hero .visuel { display: flex; justify-content: center; }
+.hero .visuel img { width: min(300px, 70vw); filter: drop-shadow(0 20px 50px rgba(0, 194, 247, .35)); }
+
+.bouton {
+  display: inline-block; padding: 12px 24px; border-radius: 999px; font-weight: 600;
+  background: var(--vert); color: #04220f; text-decoration: none;
+}
+.bouton:hover { filter: brightness(1.08); }
+.bouton.fantome { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); margin-left: 8px; }
+
+/* ---------- Sections claires ---------- */
+section.bloc { padding: 64px 0; }
+.surtitre { color: var(--bleu); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; margin: 0 0 6px; }
+section.bloc h2 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); color: var(--marine); margin: 0 0 32px; }
+
+.grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.carte {
+  background: #fff; border: 1px solid var(--gris-clair); border-radius: 18px; padding: 24px;
+  box-shadow: 0 6px 24px rgba(11, 45, 91, .06);
+}
+.carte .pastille {
+  width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+  background: var(--degrade); color: #fff; margin-bottom: 14px;
+}
+.carte .pastille svg { width: 26px; height: 26px; }
+.carte h3 { margin: 0 0 6px; color: var(--marine); font-size: 1.1rem; }
+.carte p { margin: 0; color: var(--texte-doux); font-size: .95rem; }
+.etiquette { display: inline-block; margin-top: 12px; font-size: .75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #EEF4FF; color: var(--bleu); }
+
+/* ---------- Mise en avant GROW ---------- */
+.grow {
+  background: linear-gradient(135deg, var(--nuit), var(--marine) 60%, #0d5c6e);
+  color: #fff; border-radius: 28px; padding: 44px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center;
+}
+.grow h2 { color: #fff !important; margin-bottom: 12px !important; }
+.grow .logo-grow {
+  font-family: "Montserrat", sans-serif; font-weight: 800; font-size: clamp(3rem, 9vw, 5rem); letter-spacing: .06em; margin: 0; text-align: center;
+  background: var(--degrade); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.grow p { color: #c9d6ea; }
+.grow ul { padding-left: 20px; color: #dbe6f5; margin: 0 0 24px; }
+.grow li { margin-bottom: 6px; }
+.grow li::marker { color: var(--vert); }
+
+/* ---------- Ton ---------- */
+.valeurs { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+.valeurs div { border-left: 3px solid var(--turquoise); padding: 4px 0 4px 16px; }
+.valeurs strong { display: block; color: var(--marine); font-family: "Montserrat", sans-serif; }
+.valeurs span { color: var(--texte-doux); font-size: .95rem; }
+
+/* ---------- Contact ---------- */
+.contact { text-align: center; }
+.contact p { color: var(--texte-doux); }
+
+/* ---------- Pages de texte ---------- */
+main.texte { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+main.texte h1 { font-size: 2rem; color: var(--marine); margin: 0 0 4px; }
+main.texte .maj { color: var(--texte-doux); margin: 0 0 32px; }
+main.texte h2 { font-size: 1.2rem; color: var(--bleu); margin: 32px 0 8px; }
+main.texte li { margin-bottom: 6px; }
+.encadre { background: #fff; border-left: 4px solid var(--turquoise); border-radius: 10px; padding: 14px 18px; margin: 20px 0; }
+
+/* ---------- Pied de page ---------- */
+footer.site { background: var(--nuit); color: #9fb3d1; padding: 28px 0; font-size: .9rem; }
+footer.site .page { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
+footer.site a { color: #c9d6ea; margin-right: 16px; }
+footer.site .marque { font-size: 1rem; }
+footer.site .marque img { width: 26px; height: 26px; }
+
+@media (max-width: 760px) {
+  .hero, .grow { grid-template-columns: 1fr; }
+  .hero { padding-top: 32px; text-align: center; }
+  .hero p { margin-left: auto; margin-right: auto; }
+  .hero .visuel { order: -1; }
+  .hero .visuel img { width: 140px; }
+  .grow { padding: 28px; }
+  header.site nav a:first-child { display: none; }
+  .bouton.fantome { margin: 10px 0 0; }
+}
